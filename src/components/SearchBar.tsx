@@ -18,15 +18,20 @@ export const SearchBar = () => {
             <span className="text-gray-500">Select symptoms...</span>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-full min-w-[320px] bg-white">
-          {tags.map((tag) => (
-            <DropdownMenuItem
-              key={tag}
-              className="flex items-center px-4 py-2 hover:bg-gray-50 cursor-pointer"
-            >
-              {tag}
-            </DropdownMenuItem>
-          ))}
+        <DropdownMenuContent 
+          className="w-[var(--radix-dropdown-menu-trigger-width)] p-4 bg-white border border-gray-200 rounded-lg shadow-lg mt-2"
+          align="start"
+        >
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <DropdownMenuItem
+                key={tag}
+                className="flex items-center px-3 py-1.5 rounded-full border border-gray-200 hover:bg-gray-50 cursor-pointer focus:bg-gray-50 focus:outline-none"
+              >
+                {tag}
+              </DropdownMenuItem>
+            ))}
+          </div>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
