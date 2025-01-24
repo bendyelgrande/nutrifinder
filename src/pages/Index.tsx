@@ -1,5 +1,4 @@
 import { SearchBar } from "@/components/SearchBar";
-import { FilterTags } from "@/components/FilterTags";
 import { FilterDropdowns } from "@/components/FilterDropdowns";
 import { ProductGrid } from "@/components/ProductGrid";
 
@@ -15,7 +14,6 @@ const Index = () => {
         {/* Search Section */}
         <div className="space-y-6 mb-12">
           <SearchBar />
-          <FilterTags />
           <FilterDropdowns />
         </div>
 
